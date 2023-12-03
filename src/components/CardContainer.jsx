@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import PlayerCard from './PlayerCard';
 import {data} from "../helper/data"
+import "./CardContainer.css";
 
 const CardContainer = () => {
     const [value, setValue] = useState("");
@@ -26,7 +27,7 @@ const CardContainer = () => {
           />
         </div>
         {value ? (
-          <div >
+          <div className="card">
             {data.filter(filterFunc).map(({ name, img, statistics }) => {
               return (
                 <PlayerCard
@@ -41,7 +42,7 @@ const CardContainer = () => {
             })}
           </div>
         ) : (
-          <div >
+          <div  className="card" >
             {data.map(({ name, img, statistics }) => {
               return (
                 <PlayerCard

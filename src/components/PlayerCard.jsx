@@ -1,15 +1,15 @@
 import React, { useState } from "react";
-
+import "./PlayerCard.css";
 const PlayerCard = ({ name, img, statistics }) => {
   const [displayStats, setDisplayStats] = useState(true);
 
   return (
-    <div
+    <div className="cardPlayer"
       
       onClick={() => setDisplayStats(!displayStats)}
     >
       {displayStats ? (
-        <img  src={img} alt={name} />
+        <img  src={img} alt={name}  width="400px"/>
       ) : (
         <ul>
           {statistics.map((item) => {
