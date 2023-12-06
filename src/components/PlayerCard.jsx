@@ -9,9 +9,11 @@ const PlayerCard = ({ name, img, statistics }) => {
       onClick={() => setDisplayStats(!displayStats)}
     >
       {displayStats ? (
-        <img  src={img} alt={name}  width="400px"/>
+        <div > <img className="playerImg"  src={img} alt={name} />
+        </div>
+       
       ) : (
-        <ul>
+        <ul className="statisticsList">
           {statistics.map((item) => {
             return (
               <li>

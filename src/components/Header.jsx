@@ -3,8 +3,8 @@ import nbaLogo from "../assests/nba-logo.png"
 
 const Header = () => {
   return (
-    <div>
-       <div>
+    <div className='headerDiv'>
+       <div >
        <img src={nbaLogo} alt="" />
        </div>
        <div>

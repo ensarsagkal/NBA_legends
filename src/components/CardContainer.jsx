@@ -18,8 +18,8 @@ const CardContainer = () => {
     }
   
     return (
-      <div>
-        <div>
+      <div className="container">
+        <div className="inputDiv">
           <input
             type="search"
             onChange={handleChange}
@@ -27,7 +27,7 @@ const CardContainer = () => {
           />
         </div>
         {value ? (
-          <div className="card">
+          <div className="cards">
             {data.filter(filterFunc).map(({ name, img, statistics }) => {
               return (
                 <PlayerCard
@@ -42,7 +42,7 @@ const CardContainer = () => {
             })}
           </div>
         ) : (
-          <div  className="card" >
+          <div  className="cards" >
             {data.map(({ name, img, statistics }) => {
               return (
                 <PlayerCard
